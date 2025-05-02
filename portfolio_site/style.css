@@ -1,0 +1,69 @@
+
+body {
+  margin: 0;
+  background-color: #0B0B0B;
+  font-family: sans-serif;
+}
+.canvas {
+  position: relative;
+  width: 1280px;
+  height: 5628px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.background {
+  position: absolute;
+  width: 1280px;
+  height: 5628px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 0;
+}
+.element {
+  position: absolute;
+  z-index: 1;
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+.fade-in.visible {
+  opacity: 1;
+}
+.project {
+  position: absolute;
+  width: 418px;
+  height: 418px;
+}
+.project-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 418px;
+  height: 418px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.project:hover .overlay {
+  opacity: 1;
+}
+.overlay-text {
+  width: 205px;
+  height: 21px;
+}
+.view-more-btn {
+  transition: transform 0.3s ease;
+}
+.view-more-btn:hover {
+  transform: scale(1.05);
+}
